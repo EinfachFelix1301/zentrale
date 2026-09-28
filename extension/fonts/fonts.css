@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(instrument-sans-var.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: block;
+  src: url(jetbrains-mono-var.woff2) format('woff2');
+}

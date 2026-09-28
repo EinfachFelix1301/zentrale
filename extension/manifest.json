@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Zentrale",
+  "version": "1.0.0",
+  "description": "Neuer Tab mit Spaces und frei verschiebbaren Widgets. Alles lokal, kein Konto.",
+  "offline_enabled": true,
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "bookmarks",
+    "contextMenus",
+    "tabs",
+    "topSites",
+    "sessions"
+  ],
+  "host_permissions": [
+    "https://api.open-meteo.com/*",
+    "https://geocoding-api.open-meteo.com/*",
+    "https://www.google.com/*",
+    "https://*.gstatic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Zentrale öffnen",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "save-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B"
+      },
+      "description": "Aktuellen Tab in die Inbox legen"
+    }
+  }
+}

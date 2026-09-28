@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuer Tab</title>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="newtab.css">
+  <link rel="icon" href="icons/icon32.png">
+</head>
+<body>
+  <div class="bg" id="bg" aria-hidden="true"></div>
+
+  <div class="app">
+    <aside class="rail" id="rail">
+      <div class="rail-top">
+        <div class="mark" aria-label="Zentrale">
+          <span class="mark-sq" aria-hidden="true"></span>
+          <span class="mark-txt">Zentrale</span>
+        </div>
+        <button class="rail-fold" type="button" data-act="fold" title="Leiste ein-/ausklappen" aria-label="Leiste ein-/ausklappen">
+          <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+      </div>
+      <div class="greet" id="greet"></div>
+      <nav class="spaces" id="spaces" aria-label="Spaces"></nav>
+      <button class="rail-add" type="button" data-act="add-space">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Space anlegen</span>
+      </button>
+      <div class="rail-foot">
+        <button class="rail-btn" type="button" data-act="settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          <span>Einstellungen</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="head">
+        <div class="head-title">
+          <div class="space-kicker" id="space-kicker"></div>
+          <h1 class="space-name" id="space-name"></h1>
+        </div>
+        <form class="cmd" id="cmd" autocomplete="off" role="search">
+          <svg class="cmd-ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+          <input id="cmd-q" type="text" placeholder="Links, Spaces, Web durchsuchen" spellcheck="false" aria-label="Suche">
+          <kbd class="cmd-kbd">Strg K</kbd>
+          <div class="cmd-hits" id="cmd-hits" hidden></div>
+        </form>
+        <div class="head-tools">
+          <button class="tool" type="button" data-act="privacy" title="Privatmodus (P)" aria-label="Privatmodus">
+            <svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <button class="tool" type="button" data-act="lock" title="Layout sperren (L)" aria-label="Layout sperren">
+            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          </button>
+          <button class="tool primary" type="button" data-act="add-widget" title="Widget hinzufügen (N)">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Widget</span>
+          </button>
+          <div class="head-clock" aria-live="off">
+            <span class="hc-time" data-clock="hm">--:--</span>
+            <span class="hc-sub" data-clock="short">--</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="canvas" id="canvas" aria-label="Widgets"></section>
+    </main>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="menu" id="menu" hidden></div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="newtab.js"></script>
+</body>
+</html>
