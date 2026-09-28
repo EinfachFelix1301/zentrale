@@ -45,6 +45,8 @@ git clone https://github.com/EinfachFelix1301/zentrale.git
 
 Im Ordner liegen jetzt unter anderem `docs` und `extension`. Gebraucht wird nur **`extension`**.
 
+Noch einfacher: Unter [Releases](https://github.com/EinfachFelix1301/zentrale/releases/latest) die Datei `zentrale-x.y.z.zip` laden. Sie enthält nur die Erweiterung. Nach dem Entpacken wählst du in Schritt 4 direkt den Ordner `zentrale`.
+
 ### Schritt 2: Erweiterungsseite öffnen
 
 Diese Adresse in die Adressleiste tippen und Enter drücken:
